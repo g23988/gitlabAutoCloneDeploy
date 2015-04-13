@@ -1,3 +1,5 @@
+這個repo是來自https://github.com/vinodc/gitlab-webhook-branch-deployer的精簡版本
+
 請安裝python2.6
 
 這個repo使用argparse去判別參數，請先安裝argparse
