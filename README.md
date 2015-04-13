@@ -29,3 +29,6 @@ https://github.com/shawn-sterling/gitlab-webhook-receiver
 
 https://github.com/vinodc/gitlab-webhook-branch-deployer
 
+# License
+
+GPLv2
