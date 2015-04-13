@@ -1,6 +1,7 @@
 請安裝python2.6
 
 這個repo使用argparse去判別參數，請先安裝argparse
+
 程式用utf-8支持中文
 ```
 easy_install argparse
