@@ -1,32 +1,25 @@
-install python 2.6 or 2.7 for your serverside
+請安裝python2.6
 
-this project uses argparse to figure out what you type in, please install argparse plugin
+這個repo使用argparse去判別參數，請先安裝argparse
+程式用utf-8支持中文
 ```
 easy_install argparse
 ```
-# How to use
+# 如何使用
 ```
-./gitlab-webhook.py -p 9090 git@172.19.1.253:/wei/pandan.git /opt/pandan
+$ ./gitlab-webhook.py --port 8000 git@github.com:vinodc/gitlab-webhook-branch-deployer.git /home/vinod/gwbd
 ```
-./gitlab-webhook-pandan.py is a webhook prototype for pandan 
+監聽8000埠，並且接收由gitlab webhook回傳的 POST json。當回傳的repository為```vinodc/gitlab-webhook-branch-deployer.git```時才會觸發動作。
 
-# start
-```
-./gitlab-webhook-pandan.py git@172.19.1.253:wei/pandan.git /opt/pandan
-```
-use git clone git@172.19.1.253:wei/gitlabAutoCloneDeploy.git && rm -rf gitlabAutoCloneDeploy/.git to deploy without .git
+當觸發時則會更新參數中所帶的位置```/home/vinod/gwbd```
 
-if you want deploy project without .git message automatically
+為了確保不會被相似名稱的branch覆蓋，任何branch中有含"/"字元的要求將會被忽略
 
-you should use -d option like
-```
-./gitlab-webhook-pandan-deploy.py git@172.19.1.253:wei/pandan.git /opt/pandan -d True
-```
-this option default is "False"
+# 額外選項
+```-d True```
+這會讓 git 的資訊被刪除，適合發布到線上環境
 
-the program will told you how to use those option
-```
-usage: gitlab-webhook-pandan-deploy.py [-h] [-p 9090] [-d]
-                                       repository branch_dir
-gitlab-webhook-pandan-deploy.py: error: argument -d/--deploynogit: expected one argument
-```
+# 引用
+https://github.com/shawn-sterling/gitlab-webhook-receiver
+https://github.com/vinodc/gitlab-webhook-branch-deployer
+
