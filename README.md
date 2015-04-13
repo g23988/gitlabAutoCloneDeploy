@@ -1,4 +1,6 @@
-這個repo是來自```https://github.com/vinodc/gitlab-webhook-branch-deployer```的精簡版本
+這個repo是來自
+https://github.com/vinodc/gitlab-webhook-branch-deployer
+的精簡版本
 
 請安裝python2.6
 
